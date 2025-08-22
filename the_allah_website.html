@@ -3,164 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Allah</title>
+  <title>The Allah - SanVyom Creations</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="theme-color" content="#0a8f08">
   <style>
+    * { box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 0;
-      background: radial-gradient(circle at top, #000 0%, #111 100%);
-      overflow-x: hidden;
+      background-color: #0a8f08;
       color: white;
+      overflow-x: hidden;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: transparent url('https://i.ibb.co/Fz1whvB/sparkle.gif') repeat;
-      opacity: 0.3;
-      pointer-events: none;
-      z-index: 0;
-    }
-
+    /* Banner */
     .banner {
       width: 100%;
-      max-height: 300px;
+      height: auto;
+      max-height: 350px;
       object-fit: cover;
-      animation: fadeIn 3s ease-in-out;
+      display: block;
+      animation: fadeIn 1s ease-in-out;
     }
 
-    .profile {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      margin-top: -80px;
-      border: 5px solid gold;
-      box-shadow: 0 0 20px gold;
-      animation: float 4s ease-in-out infinite;
-      position: relative;
-      z-index: 2;
+    main {
+      padding: 20px 16px;
     }
-
     h1 {
-      margin: 10px 0;
+      margin: 10px 0 6px;
       color: gold;
       text-shadow: 0 0 15px rgba(255,215,0,0.8);
-      animation: fadeIn 2s ease-in;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      animation: fadeIn 0.8s ease-in;
     }
-
-    p {
-      color: #ddd;
-      font-size: 1.2em;
+    p.tagline {
+      color: #e8fbe8;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      margin: 0 0 10px;
     }
 
     /* Buttons */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 18px auto 6px;
+      max-width: 520px;
+    }
     .button {
-      display: inline-block;
-      margin: 12px;
-      padding: 12px 25px;
-      background: linear-gradient(90deg, #cc0000, #ff4444, #cc0000);
-      background-size: 200% auto;
-      color: white;
+      flex: 1 1 calc(33% - 10px);
+      min-width: 120px;
+      padding: 12px;
+      background: #ffffff;
+      color: #cc0000;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: bold;
-      animation: shimmer 3s infinite linear;
-      box-shadow: 0 0 10px rgba(255,0,0,0.7);
-      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px rgba(255,0,0,0.3);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-align: center;
+      border: 2px solid #cc0000;
     }
-
     .button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 25px rgba(255,0,0,1);
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 0 18px rgba(255,0,0,0.8);
     }
 
-    /* Gallery */
-    .gallery {
-      margin: 30px auto;
-      max-width: 900px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .gallery h2 {
-      margin-bottom: 20px;
-      color: gold;
-      text-shadow: 0 0 15px rgba(255,215,0,0.7);
-    }
-
-    .gallery img {
-      width: 250px;
-      margin: 10px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255,255,255,0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 30px gold;
-    }
-
-    /* Footer */
     footer {
-      margin-top: 50px;
-      padding: 15px;
-      background: #000;
+      margin-top: 40px;
+      padding: 14px 10px;
+      background: #002f00;
       color: gold;
       text-align: center;
-      font-size: 1em;
+      font-size: clamp(0.95rem, 2vw, 1rem);
       border-top: 2px solid gold;
       text-shadow: 0 0 10px rgba(255,215,0,0.7);
     }
 
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-    }
-
-    @keyframes shimmer {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 200% 50%; }
-    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   </style>
 </head>
 <body>
-  <!-- Banner -->
-  <img src="images/banner.jpg" alt="Channel Banner" class="banner">
+  <header>
+    <img src="Lucid_Origin_Write_AlhamDulillah_and_SanVyom_in_a_small_elegan_3~2.jpg" alt="AlhamDulillah Banner" class="banner">
+  </header>
 
-  <!-- Profile -->
-  <img src="images/logo.png" alt="Channel Logo" class="profile">
+  <main>
+    <h1>The Allah</h1>
+    <p class="tagline">Allah Of Alhamdulillah Creations.</p>
 
-  <!-- Channel Info -->
-  <h1>The Allah</h1>
-  <p>Allah Of Alhamdulillah Creations.</p>
+    <div class="buttons">
+      <a href="https://www.youtube.com/@SanVyom/community" class="button" target="_blank">📝 Posts</a>
+      <a href="https://www.youtube.com/@SanVyom/playlists" class="button" target="_blank">🎵 Playlists</a>
+      <a href="https://www.youtube.com/@SanVyom/shorts" class="button" target="_blank">📱 Shorts</a>
+    </div>
+  </main>
 
-  <!-- YouTube Links -->
-  <div>
-    <a href="https://www.youtube.com/@SanVyom/community" class="button" target="_blank">📝 Posts</a>
-    <a href="https://www.youtube.com/@SanVyom/playlists" class="button" target="_blank">🎵 Playlists</a>
-    <a href="https://www.youtube.com/@SanVyom/shorts" class="button" target="_blank">📱 Shorts</a>
-  </div>
-
-  <!-- Gallery Section -->
-  <div class="gallery">
-    <h2>🌟 Gallery 🌟</h2>
-    <img src="images/logo.png" alt="Gallery Image 1">
-    <img src="images/banner.jpg" alt="Gallery Image 2">
-  </div>
-
-  <!-- Footer -->
   <footer>
-    <p>✨ These unique ideas are by <strong>SanVyom</strong> &copy; All Rights Reserved ✨</p>
+    <p>©2025 SanVyom All Rights Reserved ✨</p>
   </footer>
 </body>
 </html>
